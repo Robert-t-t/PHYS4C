@@ -1,0 +1,25 @@
+Exam2.aux
+Exam2.fdb_latexmk
+Exam2.fls
+Exam2.log
+
+
+# Auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+
+# SyncTeX (used for synchronization between editor and PDF)
+*.synctex.gz
+
+# Temporary files
+*.nav
+*.snm
+*.vrb
+
+# PDF output (optional, if you don’t want version control on compiled PDFs)
