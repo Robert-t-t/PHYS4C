@@ -1,21 +1,107 @@
 \documentclass{article}
-\usepackage{amsmath}  % For math symbols
-\usepackage{graphicx} % For images
+\usepackage{amsmath, amssymb}
 
 \begin{document}
 
-\title{My First LaTeX Document for Physics}
-\author{Robert Cruz Diaz and Alondra Garcia Bejarano}
-\date{\today}
-
+\title{Thermodynamics Formulas - Chapters 19 and 20}
+\author{}
+\date{}
 \maketitle
 
-\section{Introduction}
-This is my first LaTeX document in VS Code. I can write equations like:
-\[
-    E = mc^2
-\]
+\section{First Law of Thermodynamics}
+\textbf{Energy Conservation:}
+\begin{equation}
+\Delta E_{\text{th}} = W + Q
+\end{equation}
+where:
+\begin{itemize}
+    \item $\Delta E_{\text{th}}$ = Change in thermal energy (J)
+    \item $W$ = Work done on the system (J)
+    \item $Q$ = Heat added to the system (J)
+\end{itemize}
 
-\section{Conclusion}
-LaTeX is great for formatting academic documents!
+\subsection{Work Done on an Ideal Gas}
+\begin{equation}
+W = - \int_{V_i}^{V_f} P \, dV
+\end{equation}
+
+\subsection{Calorimetry Equation (Heat Transfer)}
+\begin{equation}
+Q = mc \Delta T
+\end{equation}
+where:
+\begin{itemize}
+    \item $Q$ = Heat energy transferred (J)
+    \item $m$ = Mass (kg)
+    \item $c$ = Specific heat capacity (J/kg$\cdot$K)
+    \item $\Delta T$ = Temperature change (K)
+\end{itemize}
+
+\subsection{Heat of Transformation (Phase Change)}
+\begin{equation}
+Q = \pm m L
+\end{equation}
+where:
+\begin{itemize}
+    \item $L$ = Latent heat (J/kg)
+    \item $L_f$ = Heat of fusion (solid $\leftrightarrow$ liquid)
+    \item $L_v$ = Heat of vaporization (liquid $\leftrightarrow$ gas)
+\end{itemize}
+
+\section{Heat Transfer Mechanisms}
+\subsection{Conduction}
+\begin{equation}
+\frac{dQ}{dt} = k A \frac{\Delta T}{L}
+\end{equation}
+
+\subsection{Radiation}
+\begin{equation}
+\frac{dQ}{dt} = e \sigma A T^4
+\end{equation}
+
+\section{Ideal Gases and Heat}
+\subsection{Ideal Gas Law}
+\begin{equation}
+PV = nRT
+\end{equation}
+
+\subsection{Internal Energy of an Ideal Gas}
+\begin{equation}
+E_{\text{th}} = \frac{f}{2} nRT
+\end{equation}
+
+\subsection{Root-Mean-Square (RMS) Speed}
+\begin{equation}
+v_{\text{rms}} = \sqrt{\frac{3 k_B T}{m}}
+\end{equation}
+
+\section{Thermodynamic Processes}
+\textbf{Isothermal Process:}
+\begin{equation}
+W = - n R T \ln \left( \frac{V_f}{V_i} \right)
+\end{equation}
+
+\textbf{Adiabatic Process:}
+\begin{equation}
+PV^{\gamma} = \text{constant}
+\end{equation}
+\begin{equation}
+TV^{\gamma - 1} = \text{constant}
+\end{equation}
+
+\textbf{Heat Capacities:}
+\begin{equation}
+C_P = C_V + R
+\end{equation}
+
+For a monatomic gas:
+\begin{equation}
+C_V = \frac{3}{2} R, \quad C_P = \frac{5}{2} R
+\end{equation}
+
+For a diatomic gas:
+\begin{equation}
+C_V = \frac{5}{2} R, \quad C_P = \frac{7}{2} R
+\end{equation}
+
 \end{document}
