@@ -13,6 +13,8 @@ where:
     \item[$l$] Length
     \item[$n_{\text{coll}}$] Number of collisions
 \end{description}
+
+
 \subsection*{Mean Free Path}
 \begin{equation}
 \lambda = \frac{1}{\sqrt{2} \pi d^2 n}
@@ -24,6 +26,146 @@ where:
     \item[$n$] Number density of the molecules
 \end{description}
 
+
 \subsection*{Additional Information}
 Monatomic gases have \( r = 0.5 \times 10^{-10} \) m and diatomic molecules have \( r = 1.0 \times 10^{-10} \) m.
+
+\subsection*{Root Mean Square (RMS) Velocity}
+\begin{equation}
+    v_{\text{rms}} = \sqrt{\frac{3k_B T}{m}}
+    \end{equation}
+where:
+\begin{description}
+    \item[$v_{\text{rms}}$] Root mean square velocity
+    \item[$k$] Boltzmann constant
+    \item[$T$] Temperature
+    \item[$m$] Mass of a molecule
+\end{description}
+
+
+\subsection*{Pressure on the Wall of the Container}
+\begin{equation}
+P = \frac{F_{\text{on wall}}}{A} = \frac{1}{3V} m v_{\text{rms}}^2
+\end{equation}
+where:
+\begin{description}
+    \item[$P$] Pressure
+    \item[$F_{\text{on wall}}$] Force on the wall
+    \item[$A$] Area of the wall
+    \item[$V$] Volume of the container
+    \item[$m$] Mass of a molecule
+    \item[$v_{\text{rms}}$] Root mean square velocity
+\end{description}
+
+\subsection*{Translational Kinetic Energy}
+\begin{equation}
+\epsilon_{\text{trans}} = \frac{1}{2} m v_{\text{rms}}^2
+\end{equation}
+where:
+\begin{description}
+    \item[$\epsilon_{\text{trans}}$] Translational kinetic energy
+    \item[$m$] Mass of a molecule
+    \item[$v_{\text{rms}}$] Root mean square velocity
+\end{description}
+
+\subsection*{Average Translational Kinetic Energy}
+\begin{equation}
+\langle \epsilon_{\text{trans}} \rangle = \frac{3}{2} k_B T
+\end{equation}
+where:
+\begin{description}
+    \item[$\langle \epsilon_{\text{trans}} \rangle$] Average translational kinetic energy
+    \item[$k_B$] Boltzmann constant
+    \item[$T$] Temperature
+\end{description}
+
+\subsection*{Thermal Energy of a Monatomic Gas}
+\begin{equation}
+U = \frac{3}{2} Nk_B T
+\end{equation}
+where:
+\begin{description}
+    \item[$U$] Thermal energy
+    \item[$N$] Number of molecules
+    \item[$k_B$] Boltzmann constant
+    \item[$T$] Temperature
+\end{description}
+
+\subsection*{Specific Heat Capacity at Constant Volume for a Monatomic Gas}
+\begin{equation}
+C_V = \frac{3}{2}R = 12.5 \, \text{J/mol·K}
+\end{equation}
+where:
+\begin{description}
+    \item[$C_V$] Specific heat capacity at constant volume
+    \item[$R$] Universal gas constant
+\end{description}
+
+\subsection*{Entropy of a Macrostate with Multiplicity}
+\begin{equation}
+S = k_B \ln \Omega
+\end{equation}
+where:
+\begin{description}
+    \item[$S$] Entropy
+    \item[$k_B$] Boltzmann constant
+    \item[$\Omega$] Multiplicity (number of microstates)
+\end{description}
+
+\subsection*{Quasi-static Process}
+\begin{equation}
+dS = \frac{dQ}{T}
+\end{equation}
+where:
+\begin{description}
+    \item[$dS$] Change in entropy
+    \item[$dQ$] Heat added to the system
+    \item[$T$] Temperature
+\end{description}
+
+
+\subsection*{Conclusion: Important Equations}
+\begin{equation}
+E_{\text{th, monatomic}} = \frac{3}{2} nRT
+\end{equation}
+\begin{equation}
+E_{\text{th, diatomic}} = \frac{5}{2} nRT
+\end{equation}
+\begin{equation}
+E_{\text{th, solid}} = 3nRT
+\end{equation}
+\begin{equation}
+U_{\text{monatomic}} = \frac{3}{2} Nk_B T
+\end{equation}
+\begin{equation}
+U_{\text{diatomic}} = \frac{5}{2} Nk_B T
+\end{equation}
+\begin{equation}
+U_{\text{solid}} = 3Nk_B T
+\end{equation}
+\begin{equation}
+C_{V, \text{monatomic}} = \frac{3}{2}R
+\end{equation}
+\textbf{Monatomic gas has \( C_V = \frac{3}{2}R \)}
+\begin{equation}
+C_{V, \text{diatomic}} = \frac{5}{2}R
+\end{equation}
+\textbf{Diatomic gas has \( C_V = \frac{5}{2}R \)}
+\begin{equation}
+C_{V, \text{solid}} = 3R
+\end{equation}
+\textbf{Elemental solid has \( C_V = 3R \)}
+where:
+\begin{description}
+    \item[$E_{\text{th, monatomic}}$] Thermal energy of a monatomic gas
+    \item[$E_{\text{th, diatomic}}$] Thermal energy of a diatomic gas
+    \item[$E_{\text{th, solid}}$] Thermal energy of an elemental solid
+    \item[$U_{\text{monatomic}}$] Internal energy of a monatomic gas
+    \item[$U_{\text{diatomic}}$] Internal energy of a diatomic gas
+    \item[$U_{\text{solid}}$] Internal energy of an elemental solid
+    \item[$C_{V, \text{monatomic}}$] Specific heat capacity at constant volume for a monatomic gas
+    \item[$C_{V, \text{diatomic}}$] Specific heat capacity at constant volume for a diatomic gas
+    \item[$C_{V, \text{solid}}$] Specific heat capacity at constant volume for an elemental solid
+\end{description}
+
 \end{document}
