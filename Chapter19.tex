@@ -3,6 +3,8 @@
 \usepackage{pgfplots}
 \usepackage{tikz}
 \usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
 
 
 % page 541 has a good amout of information
@@ -136,13 +138,13 @@ to be continue
 
 
 \begin{equation}
-    Q = Mc \Delta T
+    Q = mc \Delta T
 \end{equation}
 
 where:
 \begin{itemize}
     \item $Q$ = Heat added to the system (J)
-    \item $M$ = Mass of the substance (kg)
+    \item $m$ = Mass of the substance (kg)
     \item $c$ = Specific heat of the substance (J/kg K)
     \item $\Delta T$ = Change in temperature of the substance (K)
 \end{itemize}
@@ -164,8 +166,169 @@ where:
 
 \section*{19.5.2 Phase Changes and Heat of Transformation}
 
+Phase changes are changes in the state of a substance, such as from solid to liquid or from liquid to gas.
+
+\begin{tcolorbox}
+    \begin{equation}
+        Q = mL \quad \text{(phase change)}
+    \end{equation}
+\end{tcolorbox}
+
+\quad
+
+\begin{tcolorbox}
+    \begin{equation}
+        Q =
+        \begin{cases} 
+          \pm M L_f & \text{melt/freeze} \\
+          \pm M L_v & \text{boil/condense}
+        \end{cases}
+    \end{equation}
+\end{tcolorbox}
+
+\quad
 
 
+\begin{table}[h]
+    \centering
+    \caption{Melting/boiling temperatures and heats of transformation}
+    \begin{tabular}{l c c c c}
+        \toprule
+        \textbf{Substance} & $T_m$ (°C) & $L_f$ (J/kg) & $T_b$ (°C) & $L_v$ (J/kg) \\
+        \midrule
+        Nitrogen ($N_2$) & $-210$ & $0.26 \times 10^5$ & $-196$ & $1.99 \times 10^5$ \\
+        Ethyl alcohol & $-114$ & $1.09 \times 10^5$ & $78$ & $8.79 \times 10^5$ \\
+        Mercury & $-39$ & $0.11 \times 10^5$ & $357$ & $2.96 \times 10^5$ \\
+        Water & $0$ & $3.33 \times 10^5$ & $100$ & $22.6 \times 10^5$ \\
+        Lead & $328$ & $0.25 \times 10^5$ & $1750$ & $8.58 \times 10^5$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\section*{19.6 Caloriemtery}
+
+calorimetery: 
+
+
+\section*{19.7 The Specific Heats of Gases}
+
+\begin{equation}
+    Q = nC_V \Delta T \quad \text{(temperature change at constand Volume)}
+\end{equation}
+
+\begin{equation}
+    Q = nC_P \Delta T \quad \text{(temperature change at constant Pressure)}
+\end{equation}
+
+where:
+\begin{itemize}
+    \item $Q$ = Heat added to the system (J)
+    \item $n$ = Number of moles of the gas (mol)
+    \item $C_V$ = Molar specific heat of the gas at constant volume (J/mol K)
+    \item $C_P$ = Molar specific heat of the gas at constant pressure (J/mol K)
+    \item $\Delta T$ = Change in temperature of the gas (K)
+\end{itemize}
+
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\tabcolsep}{10pt}
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Gas} & $C_P$ & $C_V$ & $C_P - C_V$ \\
+        \midrule
+        \multicolumn{4}{l}{\textbf{Monatomic Gases}} \\
+        He & 20.8 & 12.5 & 8.3 \\
+        Ne & 20.8 & 12.5 & 8.3 \\
+        Ar & 20.8 & 12.5 & 8.3 \\
+        \midrule
+        \multicolumn{4}{l}{\textbf{Diatomic Gases}} \\
+        H$_2$ & 28.7 & 20.4 & 8.3 \\
+        N$_2$ & 29.1 & 20.8 & 8.3 \\
+        O$_2$ & 29.2 & 20.9 & 8.3 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Molar specific heats of gases (J/mol K) at $T = 0^\circ C$}
+    \label{tab:specific_heats}
+\end{table}
+
+
+\quad
+
+\begin{tcolorbox}[colback=yellow!15, colframe=black, sharp corners, boxrule=1pt, width=\textwidth]
+    \begin{equation} 
+        C_P - C_V = R
+        \quad
+        \text{or}
+        \quad
+        C_P = C_V + R
+    \end{equation}
+\end{tcolorbox}
+
+\begin{equation}
+    \Delta E_\text{th} = nC_V \Delta T \quad \text{(any ideal-gas process)}
+\end{equation}
+
+
+\section*{19.7.3 Adiabatic Processes}
+
+\noindent \textbf{FIGURE 19.19} \quad \textbf{The relationship of three important processes to the first law of thermodynamics.}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \begin{tikzpicture}
+        % Main equation box
+        \node at (0,0) [draw, fill=gray!20, rounded corners, minimum width=4cm, minimum height=1cm] 
+            {$\Delta E_{\text{th}} = W + Q$};
+        
+        % Isothermal process
+        \node at (-4, 1.5) {\textit{An isothermal}};
+
+        \node at (-4, 1.2) {\textit{process has} $\Delta E_{\text{th}} = 0,$};
+        \node at (-4, 0.9) {\textit{so} $W = -Q.$};
+        \draw[->, dashed] (-2, 1) -- (-0.6, 0.2);
+        
+        % Isochoric process
+        \node at (4, 1.5) {\textit{An isochoric}};
+        \node at (4, 1.2) {\textit{process has} $W = 0,$};
+        \node at (4, 0.9) {\textit{so} $\Delta E_{\text{th}} = Q.$};
+        \draw[->, dashed] (2.2, 1) -- (0.6, 0.2);
+        
+        % Adiabatic process
+        \node at (2, -1.5) {\textit{An adiabatic process}};
+        \node at (2, -1.8) {\textit{has} $Q = 0,$ \textit{so} $\Delta E_{\text{th}} = W.$};
+        \draw[->, dashed] (1.2, -1.2) -- (1.1, -0.3);
+    \end{tikzpicture}
+\end{center}
+
+\quad
+
+\begin{tcolorbox}[colback=yellow!15, colframe=black, sharp corners, boxrule=1pt, width=\textwidth]
+    \begin{equation}
+       W = nC_V \Delta T \quad \text{(adiabatic process)}
+    \end{equation}
+\end{tcolorbox}
+
+\subsection{Specific Hear Ratio $\gamma$}
+
+\begin{tcolorbox}[colback = red!15, colframe=black, sharp corners, boxrule=1pt, width=\textwidth]
+    \begin{equation}
+        \gamma = \frac{C_P}{C_V}
+    \end{equation}
+\end{tcolorbox}
+\quad
+An adiabatic process is one in which
+
+\begin{tcolorbox}
+    \begin{equation}
+        pV^\gamma = \text{constant} \quad \textsl{or} \quad p_i V_i^\gamma = p_f V_f^\gamma
+    \end{equation}
+\end{tcolorbox}
+
+
+%Start of the addtion notes page
 \section*{Addtional Notes}
 when you want to find M (molar mass) you can use the following formula:
 \begin{equation}
@@ -186,6 +349,26 @@ where:
 \begin{equation}
     n = \frac{\text{mass of the gas}}{\text{molar mass of the gas}}
 \end{equation}
+
+\section*{Celsius scale to Kelvin scale conversion}
+\begin{tcolorbox}
+    \begin{equation}
+        T_K = T_C + 273
+    \end{equation}
+\end{tcolorbox}
+
+\section*{Find mass with given Volume}
+Usally these probelms give you Volume and wonder how do we get mass.
+
+We have to take a look at the period table and find density.
+
+After that we can now use the following formula to find mass:
+
+\begin{tcolorbox}
+    \begin{equation}
+        m = \rho V
+    \end{equation}
+\end{tcolorbox}
 
 
 \end{document}
