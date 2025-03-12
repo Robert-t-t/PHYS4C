@@ -2,34 +2,70 @@
 \usepackage{amsmath, amssymb}
 
 \begin{document}
-
 \section*{Equations to help with Exam 2, PHY-4C}
-\subsection{Free Mean Path}
-\begin{equation}
-\lambda = \frac{l}{n_{\text{coll}}}
-\end{equation}
-where:
-\begin{description}
-    \item[$\lambda$] Mean free path (m)
-    \item[$l$] Length (m)
-    \item[$n_{\text{coll}}$] Number of collisions
-\end{description}
-
-
-\subsection*{Mean Free Path}
-\begin{equation}
-\lambda = \frac{1}{\sqrt{2} \pi d^2 n}
-\end{equation}
-where:
-\begin{description}
-    \item[$\lambda$] Mean free path (m)
-    \item[$d$] Diameter of the molecules (m)
-    \item[$n$] Number density of the molecules (m\(^{-3}\))
-\end{description}
-
-
-\subsection*{Additional Information}
+\subsection*{Important Information}
 Monatomic gases have \( r = 0.5 \times 10^{-10} \) m and diatomic molecules have \( r = 1.0 \times 10^{-10} \) m.
+
+\subsection*{Important}
+
+\textbf{Conversion from grams to kilograms:}
+\begin{equation}
+1 \, \text{g} = 1 \times 10^{-3} \, \text{kg}
+\end{equation}
+
+\textbf{Conversion of cubic centimeters to cubic meters:}
+\begin{equation}
+1 \, \text{cm}^3 = 1 \times 10^{-6} \, \text{m}^3
+\end{equation}
+
+\textbf{Boltzmann constant:}
+\begin{equation}
+k_B = 1.38 \times 10^{-23} \, \text{J/K}
+\end{equation}
+
+\textbf{Conversion from Celsius to Kelvin:}
+\begin{equation}
+T(K) = T(°C) + 273.15
+\end{equation}
+
+\textbf{Conversion from Kelvin to Celsius:}
+\begin{equation}
+T(°C) = T(K) - 273.15
+\end{equation}
+
+\textbf{Avogadro's number:}
+\begin{equation}
+N_A = 6.022 \times 10^{23} \, \text{mol}^{-1}
+\end{equation}
+
+\textbf{Conversion of kilopascals to pascals:}
+\begin{equation}
+1 \, \text{kPa} = 1 \times 10^3 \, \text{m}^3
+\end{equation}
+
+\subsection*{Mean Free Path Equation}
+\begin{equation}
+\lambda = \frac{1}{4\sqrt{2} \pi {N}/{V} r^2}
+\end{equation}
+where:
+\begin{description}
+    \item[$\lambda$] Mean free path (m)
+    \item[$N$] Number of molecules (molecules)
+    \item[$V$] Volume (m\(^3\))
+    \item[$r$] Radius of the molecules (m)
+\end{description}
+
+
+\textbf{Number density:}
+\begin{equation}
+\frac{N}{V} = n
+\end{equation}
+where:
+\begin{description}
+    \item[$N$] Number of molecules (molecules)
+    \item[$V$] Volume (m\(^3\))
+    \item[$n$] Number density (molecules/m\(^3\))
+\end{description}
 
 \subsection*{Root Mean Square (RMS) Velocity}
 \begin{equation}
@@ -82,15 +118,39 @@ where:
 
 \subsection*{Thermal Energy of a Monatomic Gas}
 \begin{equation}
-U = \frac{3}{2} Nk_B T
+E = \frac{3}{2} Nk_B T
 \end{equation}
 where:
 \begin{description}
-    \item[$U$] Thermal energy (J)
+    \item[$E$] Thermal energy (J)
     \item[$N$] Number of molecules (mol)
     \item[$k_B$] Boltzmann constant (J/K)
     \item[$T$] Temperature (K)
 \end{description}
+end{equation}
+
+\textbf{Number density:}
+\begin{equation}
+\frac{N}{V} = n
+\end{equation}
+where:
+\begin{description}
+    \item[$N$] Number of molecules (molecules)
+    \item[$V$] Volume (m\(^3\))
+    \item[$n$] Number density (molecules/m\(^3\))
+\end{description}
+
+\subsection*{Efficiency of a Carnot Engine}
+\begin{equation}
+n = 1 - \frac{T_c}{T_h}
+\end{equation}
+where:
+\begin{description}
+    \item[$n$] Efficiency
+    \item[$T_c$] Temperature of the cold reservoir (K)
+    \item[$T_h$] Temperature of the hot reservoir (K)
+\end{description}
+textbf{Note:} First change temperatures to Kelvin, then at the end convert back to Celsius. Also, \( n \) needs to be divided by 100 to remove percentage.
 
 \subsection*{Specific Heat Capacity at Constant Volume for a Monatomic Gas}
 \begin{equation}
@@ -136,13 +196,13 @@ E_{\text{th, diatomic}} = \frac{5}{2} nRT
 E_{\text{th, solid}} = 3nRT
 \end{equation}
 \begin{equation}
-U_{\text{monatomic}} = \frac{3}{2} Nk_B T
+E_{\text{monatomic}} = \frac{3}{2} Nk_B T
 \end{equation}
 \begin{equation}
-U_{\text{diatomic}} = \frac{5}{2} Nk_B T
+E_{\text{diatomic}} = \frac{5}{2} Nk_B T
 \end{equation}
 \begin{equation}
-U_{\text{solid}} = 3Nk_B T
+E_{\text{solid}} = 3Nk_B T
 \end{equation}
 \begin{equation}
 C_{V, \text{monatomic}} = \frac{3}{2}R
@@ -156,17 +216,5 @@ C_{V, \text{diatomic}} = \frac{5}{2}R
 C_{V, \text{solid}} = 3R
 \end{equation}
 \textbf{Elemental solid has \( C_V = 3R \)}
-where:
-\begin{description}
-    \item[$E_{\text{th, monatomic}}$] Thermal energy of a monatomic gas
-    \item[$E_{\text{th, diatomic}}$] Thermal energy of a diatomic gas
-    \item[$E_{\text{th, solid}}$] Thermal energy of an elemental solid
-    \item[$U_{\text{monatomic}}$] Internal energy of a monatomic gas
-    \item[$U_{\text{diatomic}}$] Internal energy of a diatomic gas
-    \item[$U_{\text{solid}}$] Internal energy of an elemental solid
-    \item[$C_{V, \text{monatomic}}$] Specific heat capacity at constant volume for a monatomic gas
-    \item[$C_{V, \text{diatomic}}$] Specific heat capacity at constant volume for a diatomic gas
-    \item[$C_{V, \text{solid}}$] Specific heat capacity at constant volume for an elemental solid
-\end{description}
 
 \end{document}
